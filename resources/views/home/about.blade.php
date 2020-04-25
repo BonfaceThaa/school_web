@@ -20,7 +20,7 @@
         <!--================About Area =================-->
         <section class="about_area p_120">
         	<div class="container">
-				<div class="section-top-border">
+				<div>
 							<h3 class="mb-30 title_color">About</h3>
 							<div class="row">
 								<div class="col-md-4">
