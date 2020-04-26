@@ -15,3 +15,8 @@ Route::get('/', 'HomeController@index');
 Route::get('/about-us', 'HomeController@about');
 Route::get('/contact-us', 'HomeController@contacts');
 Route::get('/events', 'HomeController@events');
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
+{
+Route::resource('/', 'UsersController');
+});
+Route::resource('events', 'EventsController');
