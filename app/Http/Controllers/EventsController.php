@@ -4,19 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Event;
+
 class EventsController extends Controller
 {   
-    /**
-     * Display admin dashboard
-     * 
-     * @return \Illuminate\Http\Response
-     */
-    
-    public function dashboard()
-    {
-        return view('events.dashboard');
-    }
-
 
     /**
      * Display a listing of the resource.
@@ -25,7 +16,8 @@ class EventsController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::all();
+        return view('events.index')->with('events', $events);
     }
 
     /**
@@ -35,7 +27,7 @@ class EventsController extends Controller
      */
     public function create()
     {
-        //
+        return view('events.create');
     }
 
     /**
@@ -46,7 +38,17 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $event = new Event([
+            'title' => $request->get('title'),
+            'body' => $request->get('body')
+        ]);
+
+        $event->save();
+
+        // flash('Event created!')->success();
+
+        return redirect()->route('events.index');
     }
 
     /**
@@ -91,6 +93,9 @@ class EventsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $event = Event::find($id);
+        $event->delete();
+
+        return redirect()->route('events.index');
     }
 }
