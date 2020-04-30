@@ -38,6 +38,10 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title'=>'required',
+            'body'=>'required'
+        ]);
 
         $event = new Event([
             'title' => $request->get('title'),
@@ -46,9 +50,8 @@ class EventsController extends Controller
 
         $event->save();
 
-        // flash('Event created!')->success();
 
-        return redirect()->route('events.index');
+        return redirect('/admin/events')->with('success', 'Event saved');
     }
 
     /**
@@ -70,7 +73,8 @@ class EventsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $event = Event::find($id);
+        return view('events.edit', compact('event'));
     }
 
     /**
@@ -82,7 +86,19 @@ class EventsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title'=>'required',
+            'body'=>'required'
+        ]);
+        
+        $event = Event::find($id);
+        $event->title = $request->get('title');
+        $event->body = $request->get('body');
+
+        $event->save();
+
+
+        return redirect('/admin/events')->with('success', 'Event saved');
     }
 
     /**

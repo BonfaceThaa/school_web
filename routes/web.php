@@ -19,4 +19,4 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 {
 Route::resource('/', 'UsersController');
 });
-Route::resource('events', 'EventsController');
+Route::resource('admin/events', 'EventsController');

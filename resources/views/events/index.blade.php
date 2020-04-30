@@ -11,7 +11,9 @@
 </div><!-- /.row -->
 <div class="row">
           <div class="col-lg-6">
-            <h2>Events & Anouncement details</h2>
+          <p>
+          <a href="/admin/events/create"><span class="btn btn-primary btn-sm"> <span class="glyphicon glyphicon-plus"></span> New Event</span></a>
+          </p>
             <div class="table-responsive">
               <table class="table table-hover tablesorter">
                 <thead>
@@ -27,9 +29,9 @@
                     <td>{{ $event->title }}</td>
                     <td>{{ $event->body }}</td>
                     <td>
-                    <a href="#"><span class="btn btn-warning btn-sm">Edit</span></a>
+                    <a href="{{ route('events.edit', $event->id) }}"><span class="btn btn-warning btn-sm">Edit</span></a>
                     <td>
-                    <form action="{{ route('events.destroy', $event->id)}}" method="post">
+                    <form action="{{ route('events.destroy', $event->id) }}" method="post">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger btn-sm" type="submit">Delete</button>
