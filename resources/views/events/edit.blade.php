@@ -23,7 +23,7 @@
 
   <div class="form-group">
     <label for="body">Body</label>
-    <textarea class="form-control" rows="6" name="body">{{ $event->body }}</textarea>
+    <textarea id="summernote" class="form-control" rows="6" name="body">{{ $event->body }}</textarea>
   </div>
 
   <button type="submit" class="btn btn-primary">Update event</button>
@@ -32,5 +32,21 @@
 
         </div>
 </div><!-- /.row -->
+<script>
+      $('#summernote').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+    </script>
 @endsection
 

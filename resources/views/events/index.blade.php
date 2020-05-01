@@ -27,7 +27,7 @@
                 @foreach ($events as $event)
                   <tr>
                     <td>{{ $event->title }}</td>
-                    <td>{{ $event->body }}</td>
+                    <td>{!! $event->body !!}</td>
                     <td>
                     <a href="{{ route('events.edit', $event->id) }}"><span class="btn btn-warning btn-sm">Edit</span></a>
                     <td>

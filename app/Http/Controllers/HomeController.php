@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,8 @@ class HomeController extends Controller
 
     // Events & announcements page
     function events() {
-        return view('home.events');
+        $events = Event::all();
+        return view('home.events')->with('events', $events);
     }
+
 }
