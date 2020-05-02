@@ -2,31 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Event;
-
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    // Home page
-    function index() {
-        return view('home.index');
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
-    // About Us page
-    function about() {
-        return view('home.about');
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
     }
-
-    // Contact Us page
-    function contacts() {
-        return view('home.contact');
-    }
-
-    // Events & announcements page
-    function events() {
-        $events = Event::all();
-        return view('home.events')->with('events', $events);
-    }
-
 }

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.base')
 @section('content')
 <!--================Home Banner Area =================-->
 <!-- <section class="banner_area">

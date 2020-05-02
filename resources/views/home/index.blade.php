@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.base')
 @section('content')
 @include('layouts.home_banner')      
         <!--================Courses Area =================-->

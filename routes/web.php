@@ -11,12 +11,16 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('/about-us', 'HomeController@about');
-Route::get('/contact-us', 'HomeController@contacts');
-Route::get('/events', 'HomeController@events');
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
+Route::get('/', 'BaseController@index');
+Route::get('/about-us', 'BaseController@about');
+Route::get('/contact-us', 'BaseController@contacts');
+Route::get('/events', 'BaseController@events');
+
+
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function()
 {
-Route::resource('/', 'UsersController');
+Route::resource('/', 'Admin\UsersController');
+Route::resource('/events', 'EventsController');
 });
-Route::resource('admin/events', 'EventsController');
+
+Auth::routes();

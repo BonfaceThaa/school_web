@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.base')
 @section('content')
         <!--================Contact Area =================-->
         <section class="contact_area p_120">
