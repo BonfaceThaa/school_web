@@ -43,7 +43,7 @@
 </div><!-- /.row -->
 <script>
       $('#summernote').summernote({
-        placeholder: 'Hello stand alone ui',
+        placeholder: 'Enter body content',
         tabsize: 2,
         height: 120,
         toolbar: [

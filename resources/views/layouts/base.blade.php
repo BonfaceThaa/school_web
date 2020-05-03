@@ -32,8 +32,8 @@
 						</ul>
 					</div>
 					<div class="float-right">
-						<a class="dn_btn" href="tel:+4400123654896">+440 012 3654 896</a>
-						<a class="dn_btn" href="mailto:support@colorlib.com">support@colorlib.com</a>
+						<a class="dn_btn" href="tel:+4400123654896">0721 242 147</a>
+						<a class="dn_btn" href="mailto:support@colorlib.com">support@nyarischool.sc.ke</a>
 					</div>
            		</div>	
            	</div>	
