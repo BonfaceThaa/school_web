@@ -24,6 +24,6 @@ class AdminAuthentication
             }
         }
 
-        return new RedirectResponse(url('/login'));
+        return new RedirectResponse(url('/auth/login'));
     }
 }

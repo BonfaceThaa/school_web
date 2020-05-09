@@ -22,12 +22,12 @@
                     <i class="fa fa-list-alt fa-5x"></i>
                   </div>
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">5</p>
+                    <p class="announcement-heading">{{ $count }}</p>
                     <p class="announcement-text">Events</p>
                   </div>
                 </div>
               </div>
-              <a href="#">
+              <a href="/nyari-admin/events">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
@@ -49,7 +49,7 @@
                     <i class="fa fa-comments fa-5x"></i>
                   </div>
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">14</p>
+                    <p class="announcement-heading">0</p>
                     <p class="announcement-text">New Messages</p>
                   </div>
                 </div>

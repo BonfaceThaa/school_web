@@ -12,7 +12,7 @@
 <div class="row">
           <div class="col-lg-6">
           <p>
-          <a href="/admin/events/create"><span class="btn btn-primary btn-sm"> <span class="glyphicon glyphicon-plus"></span> New Event</span></a>
+          <a href="/nyari-admin/events/create"><span class="btn btn-primary btn-sm"> <span class="glyphicon glyphicon-plus"></span> New Event</span></a>
           </p>
             <div class="table-responsive">
               <table class="table table-hover tablesorter">

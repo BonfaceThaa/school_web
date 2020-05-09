@@ -51,7 +51,7 @@ class EventsController extends Controller
         $event->save();
 
 
-        return redirect('/admin/events')->with('success', 'Event saved');
+        return redirect('/nyari-admin/events')->with('success', 'Event saved');
     }
 
     /**
@@ -98,7 +98,7 @@ class EventsController extends Controller
         $event->save();
 
 
-        return redirect('/admin/events')->with('success', 'Event saved');
+        return redirect('/nyari-admin/events')->with('success', 'Event saved');
     }
 
     /**

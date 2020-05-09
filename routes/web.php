@@ -17,10 +17,14 @@ Route::get('/contact-us', 'BaseController@contacts');
 Route::get('/events', 'BaseController@events');
 
 
-Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function()
+Route::group(['prefix' => 'nyari-admin', 'middleware' => 'admin'], function()
 {
 Route::resource('/', 'Admin\UsersController');
 Route::resource('/events', 'EventsController');
 });
 
-Auth::routes();
+Route::group(['prefix' => 'auth'], function () {
+
+    Auth::routes();
+
+});

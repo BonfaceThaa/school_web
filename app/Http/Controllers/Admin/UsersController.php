@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Event;
+
 class UsersController extends Controller
 {
     /**
@@ -15,6 +17,7 @@ class UsersController extends Controller
     
     public function index()
     {
-        return view('users.index');
+        $count = Event::all()->count();
+        return view('users.index')->with('count', $count);
     }
 }
