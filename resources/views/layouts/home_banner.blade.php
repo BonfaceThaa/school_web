@@ -4,7 +4,7 @@
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 				<div class="container">
 					<div class="banner_content text-center" style="color:#f2f3f4">
-						<h3>We Ensure better education <br />for a better world</h3>
+						<h3 style="color: #238b45;">We Ensure better education <br />for a better world</h3>
 						<p>In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of the space telescope known as the Hubble.</p>
 						<a class="main_btn" href="#">Get Started</a>
 					</div>
